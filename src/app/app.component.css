@@ -1,5 +1,4 @@
 
-
 .l-header {
     display: block;
 }
@@ -29,4 +28,3 @@ main {
 ::ng-deep body {
     background: white;
 }
-

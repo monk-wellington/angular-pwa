@@ -1,30 +1,18 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
-import {AppComponent} from './app.component';
-import {LessonsComponent} from './lessons/lessons.component';
+import { AppComponent } from './app.component';
+import { LessonsComponent } from './lessons/lessons.component';
 
-import {LessonsService} from "./services/lessons.service";
-import {ReactiveFormsModule} from "@angular/forms";
+import { LessonsService } from './services/lessons.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import {environment} from '../environments/environment';
-import {ServiceWorkerModule} from '@angular/service-worker';
+import { environment } from '../environments/environment.prod';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
-
-
-
-
-
-
-
-
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {AppRoutingModule} from "./app-routing.module";
-import {NewsletterService} from "./services/newsletter.service";
-
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [
@@ -32,7 +20,7 @@ import {NewsletterService} from "./services/newsletter.service";
         LessonsComponent
     ],
     imports: [
-        BrowserModule.withServerTransition({ appId: 'serverApp' }),
+        BrowserModule,
         HttpClientModule,
         BrowserAnimationsModule,
         AppRoutingModule,
@@ -41,8 +29,7 @@ import {NewsletterService} from "./services/newsletter.service";
 
     ],
     providers: [
-        LessonsService,
-        NewsletterService
+        LessonsService
     ],
     bootstrap: [AppComponent]
 })
